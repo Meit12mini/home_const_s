@@ -38,16 +38,24 @@ const Constructor: React.FC<ConstructorProps> = ({ project }) => {
     );
   }
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const configuration = getFullConfiguration();
-    console.log('--- ЗАЯВКА НА СМЕТУ ---');
-    console.log('Имя:', name);
-    console.log('Телефон:', phone);
-    console.log('Конфигурация:', configuration);
-    console.log('-----------------------');
+const handleFormSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  const configuration = getFullConfiguration();
+
+  try {
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, configuration }),
+    });
+
+    const data = await response.json();
+    console.log(data.message);
     setSubmitted(true);
-  };
+  } catch (error) {
+    console.error('Ошибка при отправке данных:', error);
+  }
+};
   
   const AddonSelector = ({ addons, onToggle, stepNumber }: { addons: AddonOption[]; onToggle: (id: string) => void; stepNumber: number; }) => (
      <div className="mb-6">
