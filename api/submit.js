@@ -7,8 +7,8 @@ export default async function handler(req, res) {
 
   try {
     console.log('Тип credentials:', typeof process.env.GOOGLE_SHEETS_CREDENTIALS);
-console.log('Длина credentials:', process.env.GOOGLE_SHEETS_CREDENTIALS?.length);
-console.log('Первые 100 символов credentials:', process.env.GOOGLE_SHEETS_CREDENTIALS?.substring(0, 100));
+    console.log('Длина credentials:', process.env.GOOGLE_SHEETS_CREDENTIALS?.length);
+    console.log('Первые 100 символов credentials:', process.env.GOOGLE_SHEETS_CREDENTIALS?.substring(0, 100));
     const { name, phone, configuration } = req.body;
     console.log('Полученные данные:', { name, phone, configuration });
 
