@@ -12,8 +12,9 @@ export default defineConfig(({ mode }) => {
       tailwindcss(),
     ],
     define: {
-      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+      'process.env.GOOGLE_SHEETS_CREDENTIALS': JSON.stringify(env.GOOGLE_SHEETS_CREDENTIALS),
+      'process.env.GOOGLE_SHEETS_ID': JSON.stringify(env.GOOGLE_SHEETS_ID),
+      'process.env.GOOGLE_SHEETS_RANGE': JSON.stringify(env.GOOGLE_SHEETS_RANGE)
     },
     resolve: {
       alias: {
