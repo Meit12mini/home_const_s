@@ -6,7 +6,7 @@ import path from 'path';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/home_const_s/', // важно для GitHub Pages в корне
+    base: '/', // важно для GitHub Pages в корне
     plugins: [
       react(),
       tailwindcss(),
