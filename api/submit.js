@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     ];
 
     await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.SPREADSHEET_ID,
+      spreadsheetId: process.env.GOOGLE_SHEETS_ID,
       range: process.env.GOOGLE_SHEETS_RANGE,
       valueInputOption: 'RAW',
       requestBody: { values: [row] },
