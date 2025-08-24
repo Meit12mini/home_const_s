@@ -26,8 +26,24 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Не указан диапазон Google Sheets' });
     }
 
+    // Правильный парсинг credentials
+    let credentials;
+    try {
+      // Пробуем разные форматы - может быть уже объект или строка JSON
+      if (typeof process.env.GOOGLE_SHEETS_CREDENTIALS === 'string') {
+        credentials = JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS);
+      } else {
+        credentials = process.env.GOOGLE_SHEETS_CREDENTIALS;
+      }
+      console.log('Credentials успешно распарсены');
+    } catch (parseError) {
+      console.error('Ошибка парсинга credentials:', parseError);
+      // Возможно, credentials уже в формате объекта или в другом формате
+      credentials = process.env.GOOGLE_SHEETS_CREDENTIALS;
+    }
+
     const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS),
+      credentials: credentials,
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
@@ -62,14 +78,23 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ message: 'Данные успешно сохранены!' });
   } catch (error) {
-    console.error('Полная ошибка при сохранении данных:', error);
-    console.error('Код ошибки:', error.code);
+    console.error('Полная ошибка при сохранении данных:');
+    console.error('Название ошибки:', error.name);
     console.error('Сообщение ошибки:', error.message);
-    console.error('Детали ошибки:', error.response?.data);
+    console.error('Стек вызовов:', error.stack);
     
+    if (error.code) {
+      console.error('Код ошибки:', error.code);
+    }
+    
+    if (error.response) {
+      console.error('Данные ответа ошибки:', error.response.data);
+      console.error('Статус ответа:', error.response.status);
+    }
+
     return res.status(500).json({ 
       error: 'Не удалось сохранить данные',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? error.message : 'Внутренняя ошибка сервера'
     });
   }
 }
