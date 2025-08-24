@@ -30,9 +30,9 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'font-bold rounded-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 inline-block text-center';
   
   const variantStyles = {
-    primary: 'bg-brand-gold text-white hover:bg-amber-500 focus:ring-brand-gold',
-    secondary: 'bg-brand-blue text-white hover:bg-blue-800 focus:ring-brand-blue',
-    outline: 'bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white focus:ring-brand-blue',
+    primary: 'bg-brand-gold text-white bg-amber-500 focus:ring-brand-gold',
+    secondary: 'bg-brand-blue text-white bg-blue-800 focus:ring-brand-blue',
+    outline: 'bg-transparent border-2 border-brand-blue text-brand-blue bg-brand-blue hover:text-white focus:ring-brand-blue',
   };
 
   const sizeStyles = {
