@@ -29,8 +29,7 @@ export default async function handler(req, res) {
     let credentials;
     try {
       credentials = JSON.parse(
-        process.env.GOOGLE_SHEETS_CREDENTIALS.replace(/\\n/g, '\n')
-      );
+        process.env.GOOGLE_SHEETS_CREDENTIALS);
       console.log('Credentials успешно распарсены');
     } catch (parseError) {
       console.error('Ошибка парсинга credentials:', parseError);
