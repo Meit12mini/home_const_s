@@ -8,6 +8,24 @@ export default async function handler(req, res) {
   try {
     const { name, phone, configuration } = req.body;
 
+    console.log('Полученные данные:', { name, phone, configuration });
+
+    // Проверка наличия обязательных переменных окружения
+    if (!process.env.GOOGLE_SHEETS_CREDENTIALS) {
+      console.error('Отсутствует GOOGLE_SHEETS_CREDENTIALS');
+      return res.status(500).json({ error: 'Не настроены учетные данные Google Sheets' });
+    }
+
+    if (!process.env.GOOGLE_SHEETS_ID) {
+      console.error('Отсутствует GOOGLE_SHEETS_ID');
+      return res.status(500).json({ error: 'Не указан ID таблицы Google Sheets' });
+    }
+
+    if (!process.env.GOOGLE_SHEETS_RANGE) {
+      console.error('Отсутствует GOOGLE_SHEETS_RANGE');
+      return res.status(500).json({ error: 'Не указан диапазон Google Sheets' });
+    }
+
     const auth = new google.auth.GoogleAuth({
       credentials: JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
@@ -31,16 +49,27 @@ export default async function handler(req, res) {
       configuration.totalPrice,
     ];
 
-    await sheets.spreadsheets.values.append({
+    console.log('Данные для записи в таблицу:', row);
+
+    const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_ID,
       range: process.env.GOOGLE_SHEETS_RANGE,
       valueInputOption: 'RAW',
       requestBody: { values: [row] },
     });
 
+    console.log('Успешный ответ от Google Sheets:', response.data);
+
     return res.status(200).json({ message: 'Данные успешно сохранены!' });
   } catch (error) {
-    console.error('Ошибка при сохранении данных:', error);
-    return res.status(500).json({ error: 'Не удалось сохранить данные' });
+    console.error('Полная ошибка при сохранении данных:', error);
+    console.error('Код ошибки:', error.code);
+    console.error('Сообщение ошибки:', error.message);
+    console.error('Детали ошибки:', error.response?.data);
+    
+    return res.status(500).json({ 
+      error: 'Не удалось сохранить данные',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
   }
 }

@@ -50,10 +50,18 @@ const handleFormSubmit = async (e: React.FormEvent) => {
     });
 
     const data = await response.json();
+    
+    if (!response.ok) {
+      console.error('Ошибка сервера:', data);
+      alert('Произошла ошибка при отправке: ' + (data.error || 'Неизвестная ошибка'));
+      return;
+    }
+    
     console.log(data.message);
     setSubmitted(true);
   } catch (error) {
     console.error('Ошибка при отправке данных:', error);
+    alert('Произошла ошибка при отправке. Проверьте консоль для подробностей.');
   }
 };
   
