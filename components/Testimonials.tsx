@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => {
                             <div className="flex items-center">
                                 <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full border-2 border-brand-gold object-cover"/>
                                 <div className="ml-4">
-                                    <p className="font-bold text-white">{testimonial.name}</p>
+                                    <p className="font-bold text-black">{testimonial.name}</p>
                                     <p className="text-blue-400 text-sm">{testimonial.project}</p>
                                 </div>
                             </div>
