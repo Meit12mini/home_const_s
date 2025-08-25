@@ -46,7 +46,6 @@ export const projects: Project[] = [
         '/img/Простор/76_Built_1739347846_1001.webp',
         '/img/Простор/76_Built_1739347846_1002.webp',
         '/img/Простор/76_Built_1739347846_2001.webp',
-        '/img/Простор/2025-08-24_15-27-38.webp',
         '/img/Простор/76_ImagesInter_1628865637_9.webp',
         '/img/Простор/76_ImagesInter_1628865687_15.webp',
         '/img/Простор/76_Planirovki_1741773327_Skandi-161.webp',
