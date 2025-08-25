@@ -49,6 +49,7 @@ export const projects: Project[] = [
         '/img/Простор/76_ImagesInter_1628865637_9.webp',
         '/img/Простор/76_ImagesInter_1628865687_15.webp',
         '/img/Простор/76_Planirovki_1741773327_Skandi-161.webp',
+        '/img/Простор/76_Planirovki_1741773339_Skandi-161-2.webp'
     ],
     configurationLevels: [
       { id: 'box', name: 'Коробка', priceModifier: 3960000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
