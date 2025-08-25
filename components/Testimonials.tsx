@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="bg-white/10 p-8 rounded-xl shadow-lg">
-                            <blockquote className="text-lg italic text-blue-100 mb-6">
+                            <blockquote className="text-lg italic text-blue-400 mb-6">
                                 "{testimonial.quote}"
                             </blockquote>
                             <div className="flex items-center">
