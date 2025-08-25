@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 w-full">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center mb-2.5 sm:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">
             Постройте дом по вашим правилам
           </h1>
