@@ -41,19 +41,24 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <img
-        src="/img/Оптима/загрузка.webp"
+        src="/public/img/мопс.webp"
         alt="Милый мопс отдыхает на диване в уютном доме"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover hidden sm:block"
       />
-
+      <img
+        src="/public/img/Google_AI_Studio_2025-08-25T06_11zon.webp"
+        alt="Милый мопс отдыхает на диване в уютном доме"
+        className="absolute inset-0 w-full h-full object-cover sm:hidden"
+      />
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 w-full">
         <div className="max-w-5xl mx-auto text-center mb-2.5 sm:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">
-            Постройте дом по вашим правилам
+            Свой дом в Чите по цене квартиры
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mb-8 drop-shadow-md mx-auto">
-            Наш онлайн-конструктор — это полный контроль над проектом и ценой. Прозрачно, удобно и без сюрпризов.
+           Без ипотеки и кредитов. Используйте маткапитал или деньги
+от продажи своего жилья
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
@@ -61,24 +66,26 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
                   onClick={onScrollToConstructor}
                   icon={<CalculatorIcon />}
                   title="Точная цена сразу"
-                  description="Соберите комплектацию и мгновенно увидьте итоговую стоимость."
+                  description="Рассчитайте финальную стоимость в
+онлайн-конструкторе за 3 минуты."
               />
               <BenefitCard
                   onClick={onScrollToConstructor}
                   icon={<CustomizeIcon />}
-                  title="Полная кастомизация"
-                  description="Выбирайте материалы фасада, кровли, окон и добавляйте опции."
+                  title="Работаем с маткапиталом"
+                  description="Поможем использовать господдержку как первый взнос.
+Законно и просто."
               />
               <BenefitCard
                   onClick={onScrollToConstructor}
                   icon={<ShieldIcon />}
                   title="Фиксированная смета"
-                  description="Цена в конструкторе = цена в договоре. Никаких скрытых платежей."
+                  description="Цена в договоре не вырастет. Никаких скрытых платежей."
               />
           </div>
 
           <Button onClick={onScrollToConstructor} variant="primary" size="lg">
-            Начать сборку
+            Рассчитать стоимость дома
           </Button>
         </div>
       </div>

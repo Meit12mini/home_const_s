@@ -246,6 +246,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
                                     </span>
                                 </div>
                                 <p className="text-sm text-gray-600 mt-1">{config.description}</p>
+                                <p className="text-sm text-gray-600 mt-1">✅ Принимаем материнский капитал</p>
                             </div>
                         ))}
                     </div>
@@ -335,6 +336,8 @@ const handleFormSubmit = async (e: React.FormEvent) => {
                         <div className="space-y-4">
                             <input type="text" placeholder="Ваше имя" value={name} onChange={(e) => setName(e.target.value)} required className="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-brand-blue focus:ring-brand-blue"/>
                             <input type="tel" placeholder="Ваш телефон (WhatsApp/Telegram)" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-brand-blue focus:ring-brand-blue"/>
+                               <p className="text-sm text-gray-600 mt-1 py-3">Наша
+смета подходит для предоставления в ПФР для использования маткапитала.</p>
                             <Button type="submit" variant="primary" size="lg" className="w-full">
                                 Получить смету и планировку
                             </Button>
