@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <img
-        src="/img/Оптима/загрузка.png"
+        src="/img/Оптима/загрузка.webp"
         alt="Милый мопс отдыхает на диване в уютном доме"
         className="absolute inset-0 w-full h-full object-cover"
       />
