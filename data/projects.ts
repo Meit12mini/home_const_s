@@ -43,13 +43,13 @@ export const projects: Project[] = [
     bedrooms: 3,
     images: [
       
-        '/img/Простор/76_Built_1739347846_1001.jpg',
-        '/img/Простор/76_Built_1739347846_1002.jpg',
-        '/img/Простор/76_Built_1739347846_2001.jpg',
+        '/img/Простор/76_Built_1739347846_1001.webp',
+        '/img/Простор/76_Built_1739347846_1002.webp',
+        '/img/Простор/76_Built_1739347846_2001.webp',
         '/img/Простор/2025-08-24_15-27-38.png',
-        '/img/Простор/76_ImagesInter_1628865637_9.jpg',
-        '/img/Простор/76_ImagesInter_1628865687_15.jpg',
-        '/img/Простор/76_Planirovki_1741773327_Skandi-161.jpg',
+        '/img/Простор/76_ImagesInter_1628865637_9.webp',
+        '/img/Простор/76_ImagesInter_1628865687_15.webp',
+        '/img/Простор/76_Planirovki_1741773327_Skandi-161.webp',
     ],
     configurationLevels: [
       { id: 'box', name: 'Коробка', priceModifier: 3960000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
@@ -86,10 +86,10 @@ export const projects: Project[] = [
     isCustom: true,
     description: 'Не нашли подходящий проект? Создайте свой! Цена — ориентир для дома 100 м², настройте и получите точный расчет.',
     images: [
-      '/img/Индивидуалка/79_Image_1603981842_Skandi-180_Izburg_1.jpg',
-      '/img/Индивидуалка/79_Image_1603981842_Skandi-180_Izburg_2.jpg',
-      '/img/Индивидуалка/dc08945868cf50ad94fdf522924cb899.jpg',
-      '/img/Индивидуалка/1aa81d5b9c0da2c48200a7cf774c2164.jpg',
+      '/img/Индивидуалка/79_Image_1603981842_Skandi-180_Izburg_1.webp',
+      '/img/Индивидуалка/79_Image_1603981842_Skandi-180_Izburg_2.webp',
+      '/img/Индивидуалка/dc08945868cf50ad94fdf522924cb899.webp',
+      '/img/Индивидуалка/1aa81d5b9c0da2c48200a7cf774c2164.webp',
     ],
     configurationLevels: [
       { id: 'box', name: 'Коробка', priceModifier: 0, pricePerSqm: 32000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
