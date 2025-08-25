@@ -27,9 +27,9 @@ const ShieldIcon = () => (
 
 
 const BenefitCard = ({ icon, title, description, onClick }: { icon: React.ReactNode; title: string; description: string; onClick: () => void; }) => (
-    <button onClick={onClick} className="bg-black/40 backdrop-blur-sm p-6 rounded-xl text-center bg-black/60 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-4 focus:ring-offset-brand-dark w-full sm:p-2.5">
+    <button onClick={onClick} className="bg-black/40 backdrop-blur-sm  rounded-xl text-center bg-black/60 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-4 focus:ring-offset-brand-dark w-full p-2.5 sm:p-6">
         {icon}
-        <h3 className="font-bold text-xl mb-2 sm:mb-0">{title}</h3>
+        <h3 className="font-bold text-xl  mb-0 sm:mb-2">{title}</h3>
         <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
     </button>
 );
