@@ -57,8 +57,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
             Свой дом в Чите по цене квартиры
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mb-8 drop-shadow-md mx-auto">
-           Без ипотеки и кредитов. Используйте маткапитал или деньги
-от продажи своего жилья
+           Ваш реальный путь к своему дому без долгов и переплат.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
