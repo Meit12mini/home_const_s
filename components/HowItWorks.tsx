@@ -3,7 +3,7 @@ import React from 'react';
 
 const Step = ({ number, title, description }: { number: string; title: string; description: string; }) => (
     <div className="text-center">
-        <div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center bg-brand-gold text-white text-2xl font-bold rounded-full shadow-lg">
+        <div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center bg-brand-gold  text-2xl font-bold rounded-full shadow-lg">
             {number}
         </div>
         <h3 className="text-xl font-bold text-brand-dark mb-2">{title}</h3>
