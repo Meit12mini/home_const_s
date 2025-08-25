@@ -20,8 +20,8 @@ const Testimonials: React.FC = () => {
         <section id="testimonials" className="py-16 sm:py-24 bg-brand-blue text-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">Отзывы наших клиентов</h2>
-                    <p className="mt-4 text-lg text-blue-200">Лучшая реклама - это счастливые новоселы.</p>
+                    <h2 className="text-3xl md:text-4xl text-black lg:text-5xl font-extrabold">Отзывы наших клиентов</h2>
+                    <p className="mt-4 text-lg text-blue-500">Лучшая реклама - это счастливые новоселы.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {testimonials.map((testimonial, index) => (
@@ -33,7 +33,7 @@ const Testimonials: React.FC = () => {
                                 <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full border-2 border-brand-gold object-cover"/>
                                 <div className="ml-4">
                                     <p className="font-bold text-white">{testimonial.name}</p>
-                                    <p className="text-blue-200 text-sm">{testimonial.project}</p>
+                                    <p className="text-blue-400 text-sm">{testimonial.project}</p>
                                 </div>
                             </div>
                         </div>
