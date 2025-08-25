@@ -246,10 +246,11 @@ const handleFormSubmit = async (e: React.FormEvent) => {
                                     </span>
                                 </div>
                                 <p className="text-sm text-gray-600 mt-1">{config.description}</p>
-                                <p className="text-sm text-gray-600 mt-1">✅ Принимаем материнский капитал</p>
+                              
                             </div>
                         ))}
                     </div>
+                      <p className="text-sm text-gray-600 mt-1">✅ Принимаем материнский капитал</p>
                 </div>
                 
                 <div className="mb-6">
