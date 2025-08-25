@@ -7,6 +7,7 @@ export const projects: Project[] = [
     area: 80,
     bedrooms: 2,
     images: [
+    
       '/img/Оптима/image_2025-08-24_16-43-24.png',
       '/img/Оптима/image_2025-08-24_16-43-56.png',
       '/img/Оптима/image_2025-08-24_16-44-41.png',
@@ -41,13 +42,14 @@ export const projects: Project[] = [
     area: 125,
     bedrooms: 3,
     images: [
-        '/img/Простор/76_Planirovki_1741773327_Skandi-161.jpg',
+      
         '/img/Простор/76_Built_1739347846_1001.jpg',
         '/img/Простор/76_Built_1739347846_1002.jpg',
         '/img/Простор/76_Built_1739347846_2001.jpg',
         '/img/Простор/2025-08-24_15-27-38.png',
         '/img/Простор/76_ImagesInter_1628865637_9.jpg',
         '/img/Простор/76_ImagesInter_1628865687_15.jpg',
+        '/img/Простор/76_Planirovki_1741773327_Skandi-161.jpg',
     ],
     configurationLevels: [
       { id: 'box', name: 'Коробка', priceModifier: 3960000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
