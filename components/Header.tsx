@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
-        <div><img src="/public/img/logo.jpg" alt="Тектоника" className="w-16 h-16" /> <a href="#" className="text-2xl font-extrabold text-brand-dark text-center sm:text-left">
+        <div><img src="/img/logo.jpg" alt="Тектоника" className="w-16 h-16" /> <a href="#" className="text-2xl font-extrabold text-brand-dark text-center sm:text-left">
           Тектоника
         </a></div>
        
