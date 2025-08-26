@@ -14,13 +14,13 @@ const Contact: React.FC = () => {
             <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold text-brand-dark">Наш офис в Чите</h3>
                 <p className="text-gray-600 mt-2">Чита, ул. Трактовая, 7а, офис 21</p>
-                <a href="tel:+79145216931" className="block text-3xl font-extrabold text-brand-blue mt-4 hover:text-blue-900 transition-colors">
-                    +7 (914) 521-69-31
+                <a href="tel:+79699302303" className="block text-3xl font-extrabold text-brand-blue mt-4 hover:text-blue-900 transition-colors">
+                    +7 (969) 930 23 03 
                 </a>
                  <p className="text-gray-500 mt-1">Звоните или пишите в WhatsApp/Telegram</p>
             </div>
             <div>
-                <Button href="tel:+79145216931" as="a" variant="primary" size="lg">Позвонить менеджеру</Button>
+                <Button href="tel:+79699302303" as="a" variant="primary" size="lg">Позвонить менеджеру</Button>
             </div>
         </div>
       </div>

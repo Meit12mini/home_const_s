@@ -10,8 +10,8 @@ const Header: React.FC = () => {
         </a></div>
        
         <div className="text-center sm:text-right">
-            <a href="tel:+79145216931" className="text-lg font-bold text-brand-blue hover:text-blue-900 transition-colors">
-                +7 (914) 521-69-31
+            <a href="tel:+79699302303" className="text-lg font-bold text-brand-blue hover:text-blue-900 transition-colors">
+                 +7 (969) 930 23 03 
             </a>
             <p className="text-sm text-gray-500">Чита, ул. Трактовая, 7а, офис 21</p>
         </div>
