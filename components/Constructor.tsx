@@ -58,6 +58,9 @@ const handleFormSubmit = async (e: React.FormEvent) => {
     }
     
     console.log(data.message);
+        if (typeof window !== 'undefined' && (window as any).ym) {
+      (window as any).ym(103774008, 'reachGoal', 'forma_smeta_sent');
+    }
     setSubmitted(true);
   } catch (error) {
     console.error('Ошибка при отправке данных:', error);
