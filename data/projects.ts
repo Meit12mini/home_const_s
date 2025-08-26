@@ -14,9 +14,9 @@ export const projects: Project[] = [
       '/img/Оптима/image_2025-08-24_16-45-04.webp',
     ],
     configurationLevels: [
-      { id: 'box', name: 'Коробка', priceModifier: 2500000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
-      { id: 'komfort', name: 'Комфорт', priceModifier: 3500000, description: "Включает 'Коробку', утепление, окна, входную дверь и внешнюю отделку. Стены готовы под чистовую отделку." },
-      { id: 'turnkey', name: 'Под ключ', priceModifier: 4800000, description: "Полностью готовый дом: комплектация 'Комфорт' плюс внутренняя отделка, электрика, сантехника и отопление." },
+      { id: 'box', name: 'Коробка', priceModifier: 3000000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
+      { id: 'komfort', name: 'Комфорт', priceModifier: 3700000, description: "Включает 'Коробку', утепление, окна, входную дверь и внешнюю отделку. Стены готовы под чистовую отделку." },
+      { id: 'turnkey', name: 'Заезжай и живи', priceModifier: 4900000, description: "Полностью готовый дом: комплектация 'Комфорт' плюс внутренняя отделка, электрика, сантехника и отопление." },
     ],
     facadeOptions: [
       { id: 'vinyl-siding', name: 'Сайдинг виниловый', priceModifier: 0, description: 'Базовая опция' },
@@ -52,9 +52,9 @@ export const projects: Project[] = [
         '/img/Простор/76_Planirovki_1741773339_Skandi-161-2.webp'
     ],
     configurationLevels: [
-      { id: 'box', name: 'Коробка', priceModifier: 3960000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
-      { id: 'komfort', name: 'Комфорт', priceModifier: 5310000, description: "Включает 'Коробку', утепление, окна, входную дверь и внешнюю отделку. Стены готовы под чистовую отделку." },
-      { id: 'turnkey', name: 'Под ключ', priceModifier: 6770000, description: "Полностью готовый дом: комплектация 'Комфорт' плюс внутренняя отделка, электрика, сантехника и отопление." },
+      { id: 'box', name: 'Коробка', priceModifier: 4500000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
+      { id: 'komfort', name: 'Комфорт', priceModifier: 5650000, description: "Включает 'Коробку', утепление, окна, входную дверь и внешнюю отделку. Стены готовы под чистовую отделку." },
+      { id: 'turnkey', name: 'Заезжай и живи', priceModifier: 7500000, description: "Полностью готовый дом: комплектация 'Комфорт' плюс внутренняя отделка, электрика, сантехника и отопление." },
     ],
     facadeOptions: [
       { id: 'vinyl-siding', name: 'Сайдинг виниловый', priceModifier: 0, description: 'Базовая опция' },
@@ -92,9 +92,9 @@ export const projects: Project[] = [
       '/img/Индивидуалка/1aa81d5b9c0da2c48200a7cf774c2164.webp',
     ],
     configurationLevels: [
-      { id: 'box', name: 'Коробка', priceModifier: 0, pricePerSqm: 32000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
+      { id: 'box', name: 'Коробка', priceModifier: 0, pricePerSqm: 36000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
       { id: 'komfort', name: 'Комфорт', priceModifier: 0, pricePerSqm: 43000, description: "Включает 'Коробку', утепление, окна, входную дверь и внешнюю отделку. Стены готовы под чистовую отделку." },
-      { id: 'turnkey', name: 'Под ключ', priceModifier: 0, pricePerSqm: 58000, description: "Полностью готовый дом: комплектация 'Комфорт' плюс внутренняя отделка, электрика, сантехника и отопление." },
+      { id: 'turnkey', name: 'Заезжай и живи', priceModifier: 0, pricePerSqm: 60000, description: "Полностью готовый дом: комплектация 'Комфорт' плюс внутренняя отделка, электрика, сантехника и отопление." },
     ],
     facadeOptions: [
       { id: 'vinyl-siding', name: 'Сайдинг виниловый', priceModifier: 0, pricePerSqm: 0, description: 'Базовая опция' },
