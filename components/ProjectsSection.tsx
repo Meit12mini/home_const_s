@@ -8,6 +8,7 @@ interface ProjectsSectionProps {
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) => {
+  
   const standardProjects = projects.filter(p => !p.isCustom);
   const customProject = projects.find(p => p.isCustom);
 
@@ -20,7 +21,18 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
       customProjectStartPrice = baseConfig.pricePerSqm * customProject.area;
     }
   }
-
+    const slug = customProject?.name
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\p{L}\p{N}-]+/gu, '')
+    .replace(/-+/g, '-');
+   if (typeof window !== 'undefined') {
+                window.history.replaceState(null, '', `#project-${slug}`); // добавляем якорь в URL
+                document
+                  .getElementById('calculator')
+                  ?.scrollIntoView({ behavior: 'smooth' }); // плавный скролл
+              }
   return (
     <section id="projects" className="py-16 sm:py-24 bg-brand-light">
       <div className="container mx-auto px-4">
@@ -32,6 +44,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
         {/* Standard Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {standardProjects.map((project) => (
+         
+            
             <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2 flex flex-col">
                 <img src={project.images[0]} alt={project.name} className="w-full h-56 object-cover"/>
                 <div className="p-6 flex flex-col flex-grow">
