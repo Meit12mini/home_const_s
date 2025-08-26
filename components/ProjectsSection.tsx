@@ -44,9 +44,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
                         от {project.configurationLevels[0].priceModifier.toLocaleString('ru-RU')} ₽
                     </p>
                     <div className="mt-auto">
-                      <Button onClick={() => onSelectProject(project);
-                        window.history.replaceState(null, '', `#project-${project.name}`);
-                      } variant="secondary" className="w-full">
+                      <Button onClick={() => onSelectProject(project)} variant="secondary" className="w-full">
                           Выбрать и рассчитать
                       </Button>
                     </div>
