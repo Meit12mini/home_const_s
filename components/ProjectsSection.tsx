@@ -93,7 +93,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
                             <p className="text-3xl font-extrabold text-brand-blue whitespace-nowrap">
                                 от {customProjectStartPrice.toLocaleString('ru-RU')} ₽
                             </p>
-                            <Button onClick={() => onSelectProject(customProject)} variant="secondary" size="lg" className="w-full sm:w-auto">
+                            <Button onClick={() => handleProjectClick(customProject)} variant="secondary" size="lg" className="w-full sm:w-auto">
                                 Настроить свой проект
                             </Button>
                         </div>
