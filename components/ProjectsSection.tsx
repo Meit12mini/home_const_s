@@ -3,11 +3,34 @@ import { Project } from '../types';
 import { projects } from '../data/projects';
 import Button from './ui/Button';
 
+
+
 interface ProjectsSectionProps {
   onSelectProject: (project: Project) => void;
 }
 
+
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) => {
+
+  const handleProjectClick = (project: Project) => {
+  onSelectProject(project);
+
+  if (typeof window !== 'undefined') {
+    // формируем безопасный slug для якоря
+    const slug = project.name
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/[^\p{L}\p{N}-]+/gu, '')
+      .replace(/-+/g, '-');
+
+    // меняем хэш в URL
+    window.history.replaceState(null, '', `#project-${slug}`);
+
+    // плавная прокрутка к калькулятору
+    document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' });
+  }
+};
   
   const standardProjects = projects.filter(p => !p.isCustom);
   const customProject = projects.find(p => p.isCustom);
@@ -21,18 +44,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
       customProjectStartPrice = baseConfig.pricePerSqm * customProject.area;
     }
   }
-    const slug = customProject?.name
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\p{L}\p{N}-]+/gu, '')
-    .replace(/-+/g, '-');
-   if (typeof window !== 'undefined') {
-                window.history.replaceState(null, '', `#project-${slug}`); // добавляем якорь в URL
-                document
-                  .getElementById('calculator')
-                  ?.scrollIntoView({ behavior: 'smooth' }); // плавный скролл
-              }
   return (
     <section id="projects" className="py-16 sm:py-24 bg-brand-light">
       <div className="container mx-auto px-4">
@@ -58,7 +69,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
                         от {project.configurationLevels[0].priceModifier.toLocaleString('ru-RU')} ₽
                     </p>
                     <div className="mt-auto">
-                      <Button onClick={() => onSelectProject(project)} variant="secondary" className="w-full">
+                      <Button onClick={() => handleProjectClick(project)} variant="secondary" className="w-full">
                           Выбрать и рассчитать
                       </Button>
                     </div>
