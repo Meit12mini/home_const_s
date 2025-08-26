@@ -45,7 +45,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
                     </p>
                     <div className="mt-auto">
                       <Button onClick={() => onSelectProject(project);
-                        window.history.replaceState(null, '', `#project-${project.name}`)
+                        window.history.replaceState(null, '', `#project-${project.name}`);
+                        document.getElementById('calculator')?.scrollIntoView({ behaviour: 'smooth' });
                       } variant="secondary" className="w-full">
                           Выбрать и рассчитать
                       </Button>
