@@ -16,8 +16,14 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) =>
   onSelectProject(project);
 
   if (typeof window !== 'undefined') {
+     const projectTranslations: Record<string, string> = {
+    'Оптима 80': 'Optima 80',
+    'Простор 125': 'Prostor 125',
+    'Индивидуальный проект': 'Individual project',
+    };
+    const slug2 = projectTranslations[project.name] || project.name;
     // формируем безопасный slug для якоря
-    const slug = project.name
+    const slug = slug2
       .toLowerCase()
       .trim()
       .replace(/\s+/g, '-')
