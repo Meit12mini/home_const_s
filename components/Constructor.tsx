@@ -68,10 +68,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
     }
     
     console.log(data.message);
-        if (typeof window !== 'undefined' && (window as any).ym) {
         
-      (window as any).ym(103774008, 'reachGoal', 'forma_smeta_sent');
-    }
       sendYandexMetric('forma_smeta_sent'); // вызов метрики
     setSubmitted(true);
   } catch (error) {
