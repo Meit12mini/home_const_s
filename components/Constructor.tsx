@@ -60,6 +60,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
 
     const data = await response.json();
     
+    
     if (!response.ok) {
       console.error('Ошибка сервера:', data);
       alert('Произошла ошибка при отправке: ' + (data.error || 'Неизвестная ошибка'));
@@ -68,8 +69,10 @@ const handleFormSubmit = async (e: React.FormEvent) => {
     
     console.log(data.message);
         if (typeof window !== 'undefined' && (window as any).ym) {
+        
       (window as any).ym(103774008, 'reachGoal', 'forma_smeta_sent');
     }
+      sendYandexMetric('forma_smeta_sent'); // вызов метрики
     setSubmitted(true);
   } catch (error) {
     console.error('Ошибка при отправке данных:', error);
@@ -351,9 +354,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
                             <input type="tel" placeholder="Ваш телефон (WhatsApp/Telegram)" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-brand-blue focus:ring-brand-blue"/>
                                <p className="text-sm text-gray-600 mt-1 py-3">Наша
 смета подходит для предоставления в ПФР для использования маткапитала.</p>
-                            <Button type="submit" onClick={() => {
-    sendYandexMetric('forma_smeta_sent'); // вызов метрики
-  }} variant="primary" size="lg" className="w-full">
+                            <Button type="submit"  variant="primary" size="lg" className="w-full">
                                 Получить смету и планировку
                             </Button>
                         </div>
