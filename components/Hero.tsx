@@ -33,16 +33,7 @@ const BenefitCard = ({ icon, title, description, onClick }: { icon: React.ReactN
         <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
     </button>
 );
-declare global {
-  interface Window {
-    ym: (counterId: number, method: string, goal: string, params?: any) => void;
-  }
-}
-const sendYandexMetric = (goal: string) => {
-  if (typeof window.ym !== 'undefined') {
-    window.ym(103774008, 'reachGoal', goal);
-  }
-};
+
 const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
   return (
     <section className="relative min-h-screen flex items-center bg-brand-dark text-white">
@@ -93,7 +84,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
 <Button 
   onClick={() => {
     onScrollToConstructor(); // ваша существующая функция
-    sendYandexMetric('forma_smeta_sent'); // вызов метрики
+ 
   }}
   variant="primary" 
   size="lg">

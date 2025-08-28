@@ -7,7 +7,16 @@ import Button from './ui/Button';
 interface ConstructorProps {
   project: Project | null;
 }
-
+declare global {
+  interface Window {
+    ym: (counterId: number, method: string, goal: string, params?: any) => void;
+  }
+}
+const sendYandexMetric = (goal: string) => {
+  if (typeof window.ym !== 'undefined') {
+    window.ym(103774008, 'reachGoal', goal);
+  }
+};
 const Constructor: React.FC<ConstructorProps> = ({ project }) => {
   const {
     selectedConfig, setSelectedConfig,
@@ -342,7 +351,9 @@ const handleFormSubmit = async (e: React.FormEvent) => {
                             <input type="tel" placeholder="Ваш телефон (WhatsApp/Telegram)" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-brand-blue focus:ring-brand-blue"/>
                                <p className="text-sm text-gray-600 mt-1 py-3">Наша
 смета подходит для предоставления в ПФР для использования маткапитала.</p>
-                            <Button type="submit" variant="primary" size="lg" className="w-full">
+                            <Button type="submit" onClick={() => {
+    sendYandexMetric('forma_smeta_sent'); // вызов метрики
+  }} variant="primary" size="lg" className="w-full">
                                 Получить смету и планировку
                             </Button>
                         </div>
