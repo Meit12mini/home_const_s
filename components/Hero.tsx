@@ -39,24 +39,22 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
     <section className="relative min-h-screen flex items-center bg-brand-dark text-white">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+      
       <img
-        src="/img/мопс.webp"
-        alt="Милый мопс отдыхает на диване в уютном доме"
-        className="absolute inset-0 w-full h-full object-cover hidden sm:block"
-      />
-      <img
-        src="/img/Google_AI_Studio_2025-08-25T06_11zon.webp"
-        alt="Милый мопс отдыхает на диване в уютном доме"
-        className="absolute inset-0 w-full h-full object-cover sm:hidden"
+        src="/img/heroimg.webp"
+        alt="Hero Image"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 w-full">
         <div className="max-w-5xl mx-auto text-center mb-2.5 sm:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">
-            Свой дом в Чите по цене квартиры
+           Не покупайте студию в Чите. Соберите свой дом от 80 м² за те же
+деньги.
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mb-8 drop-shadow-md mx-auto">
-           Ваш реальный путь к своему дому без долгов и переплат.
+           Воспользуйтесь нашим онлайн-конструктором, чтобы за 5 минут
+собрать дом своей мечты и получить точную смету.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
@@ -88,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
   }}
   variant="primary" 
   size="lg">
-            Рассчитать стоимость дома
+           Собрать свой дом
           </Button>
         </div>
       </div>

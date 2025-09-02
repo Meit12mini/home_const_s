@@ -32,12 +32,13 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-brand-light font-sans">
       <Header />
       <main>
-        <Hero onScrollToConstructor={handleScrollToConstructor} />
-        <ProjectsSection onSelectProject={handleSelectProject} />
-        <HowItWorks />
+        <Hero onScrollToConstructor={handleScrollToConstructor} /> 
         <div ref={constructorRef}>
           <Constructor project={selectedProject} />
         </div>
+        <ProjectsSection onSelectProject={handleSelectProject} />
+        <HowItWorks />
+       
         <WhyUs />
         <Gallery />
         <Testimonials />
