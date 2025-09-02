@@ -42,7 +42,7 @@ const App: React.FC = () => {
         <WhyUs />
         <Gallery />
         <Testimonials />
-        <Contact />
+        <Contact onScrollToConstructor={handleScrollToConstructor}  />
       </main>
       <Footer />
     </div>
