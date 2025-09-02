@@ -2,11 +2,12 @@
 import React from 'react';
 import Button from './ui/Button';
 
-interface HeroProps {
+interface ContProps {
   onScrollToConstructor: () => void;
 }
 
-const Contact: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
+
+const Contact: React.FC<ContProps> = ({ onScrollToConstructor }) => {
   return (
     <section id="contact" className="py-16 sm:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
