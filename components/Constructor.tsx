@@ -72,7 +72,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
         
       sendYandexMetric('forma_smeta_sent'); // вызов метрики
         if (typeof window._tmr !== 'undefined') {
-      window._tmr.push({ type: 'reachGoal', id: 3687432, goal: 'Получить смету и планировку' });
+      window._tmr.push({ type: 'reachGoal', id: 3687432, goal: 'Smeta' });
     }
     setSubmitted(true);
   } catch (error) {
