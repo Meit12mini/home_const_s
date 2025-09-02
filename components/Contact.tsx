@@ -2,7 +2,11 @@
 import React from 'react';
 import Button from './ui/Button';
 
-const Contact: React.FC = () => {
+interface HeroProps {
+  onScrollToConstructor: () => void;
+}
+
+const Contact: React.FC = ({ onScrollToConstructor }) => {
   return (
     <section id="contact" className="py-16 sm:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -12,7 +16,9 @@ const Contact: React.FC = () => {
 какой дом у вас может быть.</p>
         </div>
         <div>
-                <Button href="tel:+79699302303" as="a" variant="primary" size="lg">Позвонить менеджеру</Button>
+                <Button onClick={() => {
+    onScrollToConstructor(); // ваша существующая функция
+  }} as="a" variant="primary" size="lg">Собрать дом и получить смету</Button>
             </div>
        
       </div>
