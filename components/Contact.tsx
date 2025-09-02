@@ -18,7 +18,7 @@ const Contact: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
         <div className='flex justify-center'>
                 <Button onClick={() => {
     onScrollToConstructor(); // ваша существующая функция
-  }} as="a" variant="primary" size="lg">Собрать дом и получить смету</Button>
+  }}  variant="primary" size="lg">Собрать дом и получить смету</Button>
             </div>
        
       </div>
