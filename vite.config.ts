@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       tailwindcss(),
+      
     ],
     define: {
       'process.env.GOOGLE_SHEETS_CREDENTIALS': JSON.stringify(env.GOOGLE_SHEETS_CREDENTIALS),
