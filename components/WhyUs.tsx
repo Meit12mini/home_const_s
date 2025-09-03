@@ -22,7 +22,7 @@ const Advantage = ({ title, description }: { title: string; description: string 
 
 const WhyUs: React.FC = () => {
   return (
-    <section id="why-us" className="py-16 sm:py-24 bg-gray-50">
+    <section id="guarantees" className="py-16 sm:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-dark">Почему нам доверяют</h2>

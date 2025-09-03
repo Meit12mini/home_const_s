@@ -170,7 +170,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
   const isBoxConfiguration = selectedConfig?.id === 'box';
 
   return (
-    <section id="constructor-section" className="py-16 sm:py-24 bg-white">
+    <section id="constructor" className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-dark">Конструктор Дома</h2>
