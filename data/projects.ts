@@ -16,9 +16,10 @@ export const projects: Project[] = [
       '/img/Оптима/image_2025-08-31_00-02-34.webp',
       '/img/Оптима/image_2025-08-31_00-02-38.webp',
       '/img/Оптима/image_2025-08-31_00-02-42.webp',
-       '/img/Оптима/image_2025-08-31_00-08-22.webp',
+     
       '/img/Оптима/photo_2025-08-31_00-09-07 (2).webp',
       '/img/Оптима/photo_2025-08-31_00-09-07.webp',
+        '/img/Оптима/image_2025-08-31_00-08-22.webp',
     ],
     configurationLevels: [
       { id: 'box', name: 'Коробка', priceModifier: 3000000, description: 'Фундамент, стены и кровля. Основа вашего будущего дома, готовая к дальнейшей отделке.' },
