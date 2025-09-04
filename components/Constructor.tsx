@@ -199,7 +199,7 @@ const handleFormSubmit = async (e: React.FormEvent) => {
               <div className="grid grid-cols-4 gap-2">
                 {project.images.map((img, index) => (
                   <button key={index} onClick={() => setCurrentImageIndex(index)} className={`rounded-lg overflow-hidden border-4 ${index === currentImageIndex ? 'border-brand-blue' : 'border-transparent'}`}>
-                    <img src={img} alt={`Миниатюра ${index + 1}`} className="w-full h-full object-cover aspect-video"/>
+                    <img src={img} alt={`Миниатюра ${index + 1}`} style={{maxWidth:'1000px'}} className="w-full h-full object-cover aspect-video"/>
                   </button>
                 ))}
               </div>
