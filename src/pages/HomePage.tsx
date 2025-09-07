@@ -12,6 +12,7 @@ import Gallery from '../../components/Gallery';
 import Testimonials from '../../components/Testimonials';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
+import { Helmet } from "react-helmet-async";
 
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(projects[0]);
@@ -29,6 +30,17 @@ function HomePage() {
   };
 
   return (
+      <>
+            <Helmet>
+            <title>Каркасные дома по цене квартиры в Чите |
+Тектоника</title>
+            <meta
+              name="description"
+              content="Не покупайте студию! Соберите свой дом от
+80 м² за те же деньги. Онлайн-конструктор на сайте. Гарантия,
+маткапитал. Строительная компания 'Тектоника'"
+            />
+          </Helmet>
     <div className="min-h-screen bg-brand-light font-sans">
       <Header />
       <main>
@@ -46,6 +58,7 @@ function HomePage() {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

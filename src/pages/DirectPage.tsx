@@ -12,6 +12,7 @@ import Gallery from '../../components/Gallery';
 import Testimonials from '../../components/Testimonials';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
+import { Helmet } from "react-helmet-async";
 
 function DirectPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(projects[0]);
@@ -29,6 +30,18 @@ function DirectPage() {
   };
 
   return (
+    <>
+        <Helmet>
+        <title>Строительство каркасных домов в Чите под ключ |
+Тектоника</title>
+        <meta
+          name="description"
+          content="Строим каркасные дома в Чите от 38 000
+руб/м². Срок от 4 месяцев. Фиксированная смета и гарантия по
+договору. Рассчитайте стоимость на онлайн-конструкторе!"
+        />
+      </Helmet>
+
     <div className="min-h-screen bg-brand-light font-sans">
       <Header />
       <main>
@@ -46,6 +59,7 @@ function DirectPage() {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 
