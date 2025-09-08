@@ -72,5 +72,40 @@ _tmr.push({id: "3687432", type: "pageView", start: (new Date()).getTime()});
 
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Функция для плавной прокрутки
+  function smoothScrollTo(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      // Небольшая задержка для полной загрузки DOM
+      setTimeout(() => {
+        const offsetTop = targetElement.offsetTop;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
+
+  // Обработка якорных ссылок
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      if (targetId) {
+        smoothScrollTo(targetId);
+      }
+    });
+  });
+
+  // Если в URL уже есть якорь, прокручиваем к нему
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+    smoothScrollTo(targetId);
+  }
+});
+</script>
   </body>
 </html>
