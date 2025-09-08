@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://d-stroy-chita.ru/sitemap.xml
+Sitemap: https://www.d-stroy-chita.ru/sitemap.xml
