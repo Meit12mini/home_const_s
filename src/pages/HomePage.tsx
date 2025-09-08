@@ -32,6 +32,7 @@ function HomePage() {
   return (
       <>
             <Helmet>
+              <link rel="canonical" href="https://www.d-stroy-chita.ru/" />
             <title>Каркасные дома по цене квартиры в Чите |
 Тектоника</title>
             <meta

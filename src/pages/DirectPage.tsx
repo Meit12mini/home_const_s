@@ -32,6 +32,7 @@ function DirectPage() {
   return (
     <>
         <Helmet>
+          <link rel="canonical" href="https://www.d-stroy-chita.ru/direct" />
         <title>Строительство каркасных домов в Чите под ключ |
 Тектоника</title>
         <meta
