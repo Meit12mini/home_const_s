@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onScrollToConstructor }) => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">
            Строительство каркасных домов в Чите.
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mb-8 drop-shadow-md mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mb-24 drop-shadow-md mx-auto">
           От 38 000 руб/м². Срок — 4 месяца. Гарантия
 по договору.
           </p>
